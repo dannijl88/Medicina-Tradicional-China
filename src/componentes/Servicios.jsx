@@ -8,8 +8,8 @@ import servicios5 from "../assets/img webp/Servicios/pexels-tima-miroshnichenko-
 
 export const Servicios = () => {
   return (
-    <div>
-      <h1 className="text-6xl font-bold text-center my-32">Servicios</h1>
+    <div className="p-4 md:max-w-[1100px] md:mx-auto">
+      <h1 className="text-6xl font-bold text-center my-20">Servicios</h1>
       <TarjetasServicios
         titulo="Acupuntura"
         texto="Ansiedad, depresión, insomnio, migrañas, ciática dolores de espalda, problemas de estomago, dolores menstruales, procesos oncológicos, alzheimer etc.."

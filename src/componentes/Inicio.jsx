@@ -10,6 +10,7 @@ import imgBombones1 from "../assets/img webp/Velas/velas navidad/bombones/velas-
 import imgBombones2 from "../assets/img webp/Velas/velas navidad/bombones/velas-bombones2.webp";
 import logoWeb from "../assets/logomedicina.png";
 import { SocialIcon } from "react-social-icons";
+import { Link } from "react-router-dom";
 
 export const Inicio = () => {
   const backgroundImg = imgHeader;
@@ -24,18 +25,18 @@ export const Inicio = () => {
           backgroundPosition: "center",
         }}
       >
-        <h1 className="relative text-white text-4xl text-center z-50">
+        <h1 className="relative text-white text-3xl font-semibold md:text-4xl text-center z-10">
           Medicina tradicional china
         </h1>
         <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
       </header>
       <main>
-        <section className="max-w-3xl min-h-96 mx-auto mt-20">
+        <section className="max-w-3xl mb-10 p-6 md:p-0 min-h-96 mx-auto mt-20">
           <article>
-            <h2 className="text-2xl text-center font-bold mb-4">
+            <h2 className="md:text-2xl text-xl text-center font-bold mb-4">
               ¿Que es la medicina tradicional china?
             </h2>
-            <p className="text-lg text-justify font-semibold">
+            <p className="md:text-lg text-justify font-semibold">
               La Medicina China Tradicional (MCT) es un sistema médico con
               raíces milenarias que se originó en China. Se basa en el concepto
               de Qi, la energía vital, y busca mantener un equilibrio de esta
@@ -52,25 +53,28 @@ export const Inicio = () => {
           </article>
         </section>
 
-        <section className="bg-[#A5856B] pt-8 min-h-[600px]">
+        <section className="bg-[#A5856B] pt-8 pb-12 min-h-[600px]">
           <h2 className="text-center font-bold text-white text-5xl mt-8 mb-20">
             ¿Como te podemos ayudar?
           </h2>
-          <div className="flex flex-wrap gap-8 justify-center">
+          <div className="flex flex-wrap gap-16 md:gap-8 justify-center">
             <TarjetaServicios
               img={imgServicios}
               titulo="Servicios"
               texto="Acupuntura, Tarot canalizador, Masaje descontracturante y relajante, Reiki, Biomagnetismo…"
+              enlace="/servicios"
             />
             <TarjetaServicios
               img={imgTalleres}
               titulo="Talleres"
-              texto="Taller de meditación, Cumpleaños/ Despedidas holisticos, Tarot grupal…     "
+              texto="Taller de meditación, Cumpleaños/ Despedidas holisticos, Tarot grupal…"
+              enlace="/talleres"
             />
             <TarjetaServicios
               img={imgVelas}
               titulo="Velas"
               texto="Velas personalizadas, y exclusivas para ti, hechas de manera artesanal."
+              enlace="/velas"
             />
           </div>
         </section>
@@ -78,12 +82,15 @@ export const Inicio = () => {
           <h2 className="text-6xl font-bold text-center mb-10">
             Bombones Aromáticos
           </h2>
-          <div className="flex flex-wrap gap-10 w-3/5 mx-auto">
-            <article className="w-2/5">
-              <img className="rounded-lg" src={cartelBombones}></img>
-            </article>
-            <aside className="w-2/4 h-[700px]">
-              <p className="text-xl mb-12">
+          <div className="flex flex-wrap gap-10 md:w-3/5 md:mx-auto">
+            <picture className="md:w-2/5 w-full">
+              <img
+                className="rounded-lg md:min-w-[300px] md:min-h-[400px]"
+                src={cartelBombones}
+              ></img>
+            </picture>
+            <aside className="md:w-2/4 md:h-[700px]">
+              <p className="text-xl mb-12 md:min-h-[300px]">
                 ¡Descubre la magia en cada llama con nuestros Bombones
                 Aromáticos Artesanales! Sumérgete en fragancias cautivadoras.
                 Elige calidad con ceras premium y mechas sin plomo para una
@@ -93,15 +100,18 @@ export const Inicio = () => {
                 ¡Ilumina tu vida con la mezcla perfecta de arte y aroma!
               </p>
               <div className="flex flex-wrap gap-10 justify-center h-96">
-                <div className="w-2/5 max-h-14">
+                <picture className="w-2/5 max-h-14">
                   <img className="rounded-xl" src={imgBombones1}></img>
-                </div>
-                <div className="w-2/5 max-h-14 mb-16">
+                </picture>
+                <picture className="w-2/5 max-h-14 mb-16">
                   <img className="rounded-xl" src={imgBombones2}></img>
-                </div>
-                <button className="bg-[#A5856B] w-36 h-12 rounded-lg text-white drop-shadow-xl hover:scale-110 hover:duration-1000">
+                </picture>
+                <Link
+                  to="/contacto"
+                  className="bg-[#A5856B] border-2 w-36 h-12 rounded-lg text-white leading-10 text-center text- drop-shadow-xl hover:scale-110 hover:duration-1000"
+                >
                   Consigue la tuya!!
-                </button>
+                </Link>
               </div>
             </aside>
           </div>
@@ -111,8 +121,8 @@ export const Inicio = () => {
             ¿Que opinan nuestros clientes?
           </h2>
           <div className="border-2 w-40 mx-auto mt-10"></div>
-          <div className="mt-24 p-4 flex flex-wrap gap-8 justify-center">
-            <div className="bg-[#282828] text-xl leading-loose text-white w-1/4 h-[400px] p-10 rounded-lg">
+          <div className="mt-12 md:mt-24 p-4 flex flex-wrap gap-8 justify-center">
+            <div className="bg-[#282828] min-w-[350px] md:max-w-[350px] text-xl leading-loose text-white w-1/4 h-[400px] p-10 rounded-lg">
               <p>
                 "No nos conocemos pero tú lectura de Tarot Canalizador Online te
                 diría que me ha dejado sin palabras para decir lo que he
@@ -123,7 +133,7 @@ export const Inicio = () => {
                 <em>Marta López</em>
               </span>
             </div>
-            <div className="bg-[#282828] text-xl leading-loose text-white w-1/4 h-[510px] p-10 rounded-lg">
+            <div className="bg-[#282828] min-w-[350px] md:max-w-[350px] text-xl leading-loose text-white w-1/4 h-[510px] p-10 rounded-lg">
               <p>
                 "Desde que hicimos domingo el primer día del taller de amor
                 propio voy con la energía a tope, estoy que ni yo misma me
@@ -135,7 +145,7 @@ export const Inicio = () => {
                 <em>Noelia Martínez</em>
               </span>
             </div>
-            <div className="bg-[#282828] text-xl leading-loose text-white w-1/4 h-[400px] p-10 rounded-lg">
+            <div className="bg-[#282828] min-w-[350px] md:max-w-[350px] text-xl leading-loose text-white w-1/4 h-[400px] p-10 rounded-lg">
               <p>
                 "Oye bonita, la Novia está muy contenta, muy muy contenta de lo
                 que hicimos ayer, yo estoy muy agusto y lo que hicimos nos
