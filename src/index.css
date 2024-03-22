@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img-fondo {
+  background-image: src("./assets/img webp/Servicios/cabecera-home.webp");
+}

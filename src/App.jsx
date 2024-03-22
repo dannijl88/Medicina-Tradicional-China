@@ -1,5 +1,7 @@
+import { RouterPrincipal } from "./routers/RouterPrincipal";
+
 function App() {
-  return <></>;
+  return <RouterPrincipal />;
 }
 
 export default App;
